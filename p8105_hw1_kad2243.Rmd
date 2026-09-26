@@ -6,11 +6,15 @@ output: github_document
 
 **P8105 Homework 1**
 
-##Problem 1
+# Problem 1
 
-#Loading the penguins data set to enviornment
+## Loading the penguins data set to enviornment
 
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
 
+#Description of the penguins dataset and variables
+
+The dataset "penguins" from the package "palmerpenguins" contains the 
+variables: **"`r names(penguins)`."**
