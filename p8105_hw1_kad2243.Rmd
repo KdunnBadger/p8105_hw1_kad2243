@@ -1,21 +1,16 @@
 ---
-title: "Simple document"
-output: html_document
+title: "Homework 1"
+author: Kate Dunn
+output: github_document
 ---
 
-I'm an R Markdown document! 
+**P8105 Homework 1**
 
-# Section 1
+##Problem 1
 
-Here's a **code chunk** that samples from 
-a _normal distribution_:
+#Loading the penguins data set to enviornment
 
 ```{r}
-samp = rnorm(100)
-length(samp)
+data("penguins", package = "palmerpenguins")
 ```
 
-# Section 2
-
-I can take the mean of the sample, too!
-The mean is `r mean(samp)`.
