@@ -6,6 +6,10 @@ output: github_document
 
 **P8105 Homework 1**
 
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
 # Problem 1
 
 ## Loading the penguins data set to enviornment
@@ -13,6 +17,7 @@ output: github_document
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
+
 
 # Description of the penguins dataset and variables
 
@@ -30,5 +35,11 @@ data("penguins", package = "palmerpenguins")
 
 - There are **`r nrow(penguins)`** rows and **`r ncol(penguins)`** columns in the dataset
 
-- The mean flipper length is **`r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` mm**
+- The mean flipper length is **`r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE), 2)` mm**
+
+# Plotting penguin flipper and bill length
+
+```{r}
+
+```
 
