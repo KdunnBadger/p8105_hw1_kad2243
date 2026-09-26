@@ -6,20 +6,26 @@ output: github_document
 
 **P8105 Homework 1**
 
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 ```
 
 # Problem 1
 
+The purpose of this report is to describe the penguins dataset using both 
+summary measures and plots. 
+
 ## Loading the penguins data set to enviornment
+
+The following code calls the dataset which will be reported on, and lists its source R package. 
 
 ```{r}
 data("penguins", package = "palmerpenguins")
 ```
 
 
-# Description of the penguins dataset and variables
+## Description of the penguins dataset and variables
+
 
 - The dataset "penguins" from the package "palmerpenguins" contains the variables: 
 
@@ -37,9 +43,16 @@ data("penguins", package = "palmerpenguins")
 
 - The mean flipper length is **`r round(mean(pull(penguins, flipper_length_mm), na.rm = TRUE), 2)` mm**
 
-# Plotting penguin flipper and bill length
+## Penguin flipper and bill length
 
-```{r}
+The following plot shows flipper length plotted against bill length (both in mm), and is grouped
+by species, illustrated by point color. 
 
+```{r,  echo = FALSE, message=FALSE, warning=FALSE}
+ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)) +
+    geom_point() +
+    labs(title = "Bill Length vs. Flipper Length",
+       x = "Bill Length (mm)",
+       y = "Flipper Length")
 ```
 
