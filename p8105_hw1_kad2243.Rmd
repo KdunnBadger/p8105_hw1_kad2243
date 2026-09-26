@@ -59,3 +59,24 @@ ggsave("Flipper_Bill_Plot.pdf")
 
 # Problem 2
 
+The purpose of this report is to generate a dataframe and investigate variable types.
+
+## Creating dataframe
+The following code generates a dataframe of size 10rows x 4columns of different variable types. 
+
+```{r}
+set.seed(27)
+
+homework_1_df = tibble(
+  hw1_sample = rnorm(10),
+  hw1_over_zero = hw1_sample > 0,
+  hw1_char = c( "a", "b", "c", "d", "e", "f", "g", "h", "i", "j"),
+  hw1_factor = factor(c("good", "bad", "ugly", "ugly", "good", "good", "ugly", "bad", "good", "bad"))
+)
+```
+The resultant dataframe is as follows:
+
+```{r,  echo = FALSE, message=FALSE, warning=FALSE}
+homework_1_df
+
+```
