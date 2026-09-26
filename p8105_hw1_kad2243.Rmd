@@ -14,7 +14,21 @@ output: github_document
 data("penguins", package = "palmerpenguins")
 ```
 
-#Description of the penguins dataset and variables
+# Description of the penguins dataset and variables
 
-The dataset "penguins" from the package "palmerpenguins" contains the 
-variables: **"`r names(penguins)`."**
+- The dataset "penguins" from the package "palmerpenguins" contains the variables: 
+
+  **`r names(penguins)`**
+
+- Species of penguins include: 
+
+  **`r levels(penguins$species)`**
+
+- Islands inhabited include:
+
+  **`r levels(penguins$island)`**
+
+- There are **`r nrow(penguins)`** rows and **`r ncol(penguins)`** columns in the dataset
+
+- The mean flipper length is **`r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` mm**
+
