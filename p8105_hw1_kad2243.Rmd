@@ -80,3 +80,37 @@ The resultant dataframe is as follows:
 homework_1_df
 
 ```
+
+## Taking the mean of different variable types
+
+Mean of numeric, logical, character, and factor variables:
+```{r, echo = FALSE}
+mean(pull(homework_1_df, hw1_sample))
+mean(pull(homework_1_df, hw1_over_zero))
+mean(pull(homework_1_df, hw1_char))
+mean(pull(homework_1_df, hw1_factor))
+```
+
+Mean is calculated for the numeric and logical variables. A mean can be calculated for the logical variable because
+logical values are stored as either 0 or 1.
+
+Mean is not able to be calculated for character or factor variables, as there is not a numeric representation of the
+values to use for calculation. 
+
+# Converting logical, charactor, and factor variables to numerics
+
+The following code coverts variables to numeric:
+```{r,  message=FALSE, warning=FALSE}
+ 
+  hw1_over_zero_n = as.numeric(pull(homework_1_df, hw1_over_zero))
+  
+  hw1_char_n = as.numeric(pull(homework_1_df, hw1_char))
+  
+  hw1_factor_n = as.numeric(pull(homework_1_df, hw1_factor))
+```
+
+This code returns logical values as either 0 or 1 corresponding with TRUE or FALSE for the logical variable.
+The factor variable returned values from 1-3, corresponding with the alphabetical order of the 3 levels of the factor.
+The character variable returned NA for all values.
+
+
