@@ -54,5 +54,8 @@ ggplot(penguins, aes(x = bill_length_mm, y = flipper_length_mm, color = species)
     labs(title = "Bill Length vs. Flipper Length",
        x = "Bill Length (mm)",
        y = "Flipper Length")
+ggsave("Flipper_Bill_Plot.pdf")
 ```
+
+# Problem 2
 
